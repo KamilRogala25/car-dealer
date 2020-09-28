@@ -39,22 +39,13 @@ public class Car {
     private Integer horsePower;
 
     @JsonProperty("hasTurbo")
-    private boolean hasTurbo;
+    private Boolean hasTurbo;
 
     @ManyToOne
     @JsonProperty("dealer")
-    @JoinColumn(name = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "dealer_id", insertable = false, updatable = false)
     private Dealer dealer;
 
-    public Car(Manufacturer manufacturer, Integer age, Double engineCapacity, Model model, Color color, Integer horsePower, boolean hasTurbo) {
-        this.manufacturer = manufacturer;
-        this.age = age;
-        this.engineCapacity = engineCapacity;
-        this.model = model;
-        this.color = color;
-        this.horsePower = horsePower;
-        this.hasTurbo = hasTurbo;
-    }
 
 
 }
